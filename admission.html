@@ -7,6 +7,10 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link rel="stylesheet" href="CssStyle/admission.css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans&display=swap' rel='stylesheet'>
+
+
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <link rel="icon" href="images/logo.png" type="image/icon type" sizes="20*20">
@@ -18,606 +22,326 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <title>Education Plus Demo</title>
-    <style>
-    @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
-        /* =========================================================================== */
-        
-        body {
-            max-width: 100%;
-            overflow-x: hidden;
-            font-family: 'Open Sans', sans-serif;
-        }
-        
-        .container {
-            width: 1170px;
-        }
-        
-        .top-container {
-            background-color: #002147;
-            padding: 10px;
-            text-align: center;
-        }
-        
-        .top-container a {
-            color: #d6d6d6;
-        }
-        
-        .top2-container {
-            padding: 18px;
-        }
-        
-        .top3-container {
-            padding: 43px;
-            background-color: #1a1f3e;
-        }
-        
-        .header {
-            padding: 10px 16px;
-            background: white;
-            color: black;
-            position: fixed;
-            /* top: 0; */
-            width: 100%;
-        }
-        
-        .color {
-            background: black;
-        }
-        
-        .fa {
-            color: #d6d6d6;
-            padding: 4px;
-        }
-        
-        .navbar-light .navbar-nav .nav-link {
-            color: #131a22;
-            font-size: 17px;
-            font-weight: 800;
-        }
-        /* ================================================================ */
-        /* SECTION */
-        
-        .wh-section {
-            background: #002147;
-            background: "bg.jpg";
-            position: relative;
-            overflow: hidden;
-            overflow-x: hidden;
-            overflow-y: hidden;
-            padding: 100px 0px 100px 0px;
-        }
-        
-        .section-title {
-            text-align: center;
-            padding: 0px 10px;
-        }
-        
-        .section-title p {
-            color: #8d969e;
-        }
-        
-        .section-title h2 {
-            text-transform: uppercase;
-            font-size: 62px;
-            color: #ffffff;
-            font-weight: 700;
-            letter-spacing: -1px;
-            margin-top: 0px;
-            margin-bottom: 25px;
-            text-shadow: 0px 1px #fff, 0px -1px #262F33;
-            line-height: 60px;
-        }
-        
-        .help-line {
-            margin-bottom: 0px;
-            font-size: 40px;
-            color: #ffffff;
-            font-weight: 500;
-            line-height: 46px;
-            font-style: normal;
-            padding-top: 30px;
-        }
-        
-        .btn {
-            color: #fff;
-            background: #f36b3b;
-            background: -webkit-linear-gradient(to top, #ef612f, #f36b3b);
-            background: linear-gradient(to top, #ef612f, #f36b3b);
-            padding: 0px 128px;
-            line-height: 40px;
-            border-radius: 3px;
-            text-transform: uppercase;
-            font-weight: 800;
-            font-size: 16px;
-            display: block;
-            text-align: center;
-        }
-        
-        .form-style {}
-        
-        .vl {
-            border-left: 1px dotted #939793;
-            height: 500px;
-            position: absolute;
-            left: 50%;
-            margin-left: -3px;
-            top: 46px;
-        }
-        
-        .form-style .form-group .row .col-md-8 input,
-        select {
-            border: 1px solid #c4c4b8;
-            height: 45px;
-            background: #fff;
-            border-radius: 2px;
-            margin-bottom: 4px;
-            font-size: 17px;
-        }
-        
-        .form-style .form-group .row .col-md-4 label {
-            height: 45px;
-            border-radius: 2px;
-            margin-bottom: 4px;
-            padding: 10px 15px;
-            box-sizing: border-box;
-            font-size: 16px;
-            color: #fff;
-        }
-        /* ======================================================================= */
-        /* FOOTER PART 1*/
-        
-        .home-foot1-img {
-            padding-top: 23px;
-        }
-        
-        .full-sec {
-            background: #f36b3b;
-            padding: 40px 0px;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .home-foot1-text h4 {
-            padding-top: 23px;
-            text-transform: uppercase;
-            font-weight: 600;
-            color: antiquewhite;
-        }
-        
-        .home-foot1-text p {
-            margin-bottom: 0px;
-            padding-top: 11px;
-            color: antiquewhite;
-        }
-        
-        .home-foot1-link {
-            position: relative;
-            overflow: hidden;
-            padding-top: 23px;
-        }
-        
-        .home-foot1-link a {
-            border: 1px solid #fff;
-            color: #fff;
-            border-radius: 50px;
-            padding: 15px 20px;
-            line-height: 60px;
-        }
-        
-        .home-foot1-link a:hover {
-            background: #fff !important;
-            color: black !important;
-        }
-        /* =================================================================== */
-        /* FOOTER PART 2*/
-        
-        .home-foot2-bg {
-            padding: 80px 0px 65px 0px;
-            background: #002147;
-        }
-        
-        .home-foot2-link {
-            border-top: 1px groove #6a83a0;
-            border-bottom: 1px groove #6a83a0;
-            padding: 35px 0px;
-            margin-top: 35px;
-        }
-        
-        .home-foot2-link .col-md-4 {
-            border-right: 1px groove #6a83a0;
-        }
-        
-        .container .row {
-            margin-left: -0.75rem;
-            margin-right: -0.75rem;
-        }
-        
-        .home-foot2-bg h4 {
-            font-size: 14px;
-            color: #d6d6d6;
-            padding-bottom: 20px;
-            text-transform: uppercase;
-        }
-        
-        .home-foot2-link ul li {
-            width: 50%;
-            float: left;
-        }
-        
-        .home-foot2-link a {
-            color: #838384;
-            font-size: 13px;
-        }
-        
-        .home-foot2-link-1 {
-            padding-top: 25px;
-        }
-        
-        .home-foot2-bg p {
-            font-size: 13px;
-            color: #838384;
-        }
-        
-        .home-foot2-link-1 ul {
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .home-foot2-link-1 ul li {
-            float: left;
-            padding-right: 8px;
-        }
-        
-        .sprite {
-            width: 157px;
-            height: 55px;
-            display: inline-block;
-        }
-        
-        .sprite-android {
-            background: url(images/googleplay.png) no-repeat -12px -15px;
-        }
-        
-        .sprite-ios {
-            background: url(images/googleplay.png) no-repeat -170px -15px;
-        }
-        
-        .footer-img img {
-            width: 157px;
-            height: 48px;
-            border-radius: 10px;
-        }
-        
-        .ft-pad {
-            margin-left: -1px !important;
-        }
-        
-        .ft-pad a i {
-            margin-right: 7px;
-            width: 32px;
-            height: 32px;
-            text-align: center;
-            border: 1px solid #6f6f6f;
-            border-radius: 20px;
-            padding: 8px;
-            color: #c5c5c5;
-        }
-        /* =====================================================================                    */
-    }
-    </style>
+
 </head>
 
 <body>
-    <div>
-        <!-- =================================================== -->
-        <section>
-            <!-- header section -->
-            <div class="top-container">
-                <!-- First top-container of website which contains contact details -->
-                <div class="row">
-                    <div class="col-lg-6">
-                        <ul class="nav justify-content-end">
-                            <li class="nav-item ">
-                                <a href="#">Contact: Lake Road, Suite 180 Farmington Hills, U.S.A.</a></li>
-                            <li class="nav-item "><a href="tel:+13115552368">Phone: +101-1231-1231</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6">
-                        <ul class="nav ">
-                            <li class="nav-item "><i class="fa fa-facebook" aria-hidden="true"></i></li>
-                            <li class="nav-item "><i class="fa fa-google-plus" aria-hidden="true"></i></li>
-                            <li class="nav-item"><i class="fa fa-twitter" aria-hidden="true"></i></li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- end of first top-container -->
-            </div>
-            <div class="container top2-container">
-                <!-- Second top-container section containing logo and navbar -->
-                <nav class="navbar navbar-expand-lg navbar-light">
-                    <a class="navbar-brand" href="#"><img src="images/education_logo.png" alt="logo"></a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto w-100 justify-content-end">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="home.html">Home <span class="sr-only"></span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.youtube.com/">About us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.youtube.com/">Admissions</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://www.youtube.com/">All Courses</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="https://www.youtube.com/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="flase">All Pages</a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="#">Home</a>
-                                    <a class="dropdown-item" href="#">About us</a>
-                                    <a class="dropdown-item" href="#">Admissions</a>
-                                    <a class="dropdown-item" href="#">All Courses</a>
-                                    <a class="dropdown-item" href="#">All Events</a>
-                                    <a class="dropdown-item" href="#">Students</a>
-                                    <a class="dropdown-item" href="#">Contact us</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">All Events</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Students</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact us</a>
-                            </li>
-
-                        </ul>
-
-                    </div>
-                </nav>
-                <!-- end of second top-container -->
-            </div>
-            <div class="container-fluid top3-container">
-            </div>
-            <!-- start of header containing search bar -->
-        </section>
-        <!-- ================================================================== -->
-        <!-- Admission -->
-        <section class="wh-section">
+    <!-- =================================================== -->
+    <section>
+        <!-- Start of First header Container -->
+        <div class="header-one">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <div class="section-title">
-                            <h2>Request An Admission</h2>
-                            <p>Fusce purus mauris, blandit vitae purus eget, viverra volutpat nibh. Nam in elementum nisi, a placerat nisi. Quisque ullamcorper magna in odio rhoncus semper.Sed nec ultricies velit. Aliquam non massa id enim ultrices aliquet
-                                a ac tortor.
-                            </p>
-                            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                            <p class="help-line">Help Line <span>+010 4561 32145</span></p>
-                            <span class="help-arrow pulse"></span>
+                    <div class="col-md-4">
+                        <a href="#">Contact: Lake Road, Suite 180 Farmington Hills, U.S.A.</a>
+                    </div>
+                    <div class="col-md-2">
+                        <a href="tel:+13115552368">Phone: +101-1231-1231</a>
+                    </div>
+                    <div class="col-md-6 header1">
+                        <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of First header Container -->
+        <div class="container top2-container">
+            <!-- Start of NavBar -->
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar-brand" href="#"><img src="images/education_logo.png" alt="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="home.html">Home <span class="sr-only"></span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">About us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="admission.html">Admissions</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">All Courses</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="https://www.youtube.com/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="flase">All Pages</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="home.html">Home</a>
+                                <a class="dropdown-item" href="about.html">About us</a>
+                                <a class="dropdown-item" href="admission.html">Admissions</a>
+                                <a class="dropdown-item" href="#">All Courses</a>
+                                <a class="dropdown-item" href="events.html">All Events</a>
+                                <a class="dropdown-item" href="#">Students</a>
+                                <a class="dropdown-item" href="contact-us.html">Contact us</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="events.html">All Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Students</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact-us.html">Contact us</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- End of  NavBar -->
+        <section class="top3-container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="search-container">
+                            <form action="/action_page.php">
+                                <input type="text" placeholder="Search.." name="search">
+                                <button type="submit">Search Course</button>
+                            </form>
                         </div>
                     </div>
-                    <div class="vl"></div>
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <form class="form-style">
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <label for="bindfirst">Full Name:</label>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <input type="text" class="form-control" id="bindfirst" name="firstname" placeholder="Enter First name" autofocus required>
-                                    </div>
+                    <div class="col-md-2"></div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- ================================================================== -->
+    <!-- Admission -->
+    <section class="wh-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <div class="section-title">
+                        <h2>Request An Admission</h2>
+                        <p>Fusce purus mauris, blandit vitae purus eget, viverra volutpat nibh. Nam in elementum nisi, a placerat nisi. Quisque ullamcorper magna in odio rhoncus semper.Sed nec ultricies velit. Aliquam non massa id enim ultrices aliquet a
+                            ac tortor.
+                        </p>
+                        <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                        <p class="help-line">Help Line <span>+010 4561 32145</span></p>
+                        <span class="help-arrow pulse"></span>
+                    </div>
+                </div>
+                <div class="vl"></div>
+                <div class="col-md-6 col-sm-12 col-xs-12">
+                    <form class="form-style">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="bindfirst">Full Name:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="bindfirst" name="firstname" placeholder="Enter First name" autofocus required>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <label for="bindnumber">Phone:</label>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <input type="tel" class="form-control" id="bindnumber" name="phone" placeholder="Enter Phone Number">
-                                    </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="bindnumber">Phone:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="tel" class="form-control" id="bindnumber" name="phone" placeholder="Enter Phone Number">
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <label for="bindid">Email Id:</label>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <input type="email" class="form-control" id="bindid" name="email" placeholder="Enter Email" required>
-                                    </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="bindid">Email Id:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="email" class="form-control" id="bindid" name="email" placeholder="Enter Email" required>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <label for="bindcity">Your City:</label>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <input type="text" class="form-control" id="bindcity" name="city" placeholder="Enter your city" autofocus required>
-                                    </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="bindcity">Your City:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="bindcity" name="city" placeholder="Enter your city" autofocus required>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <label for="bindeducation">Education:</label>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <input type="text" class="form-control" id="bindeducation" name="city" placeholder="Enter your education" autofocus required>
-                                    </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="bindeducation">Education:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" class="form-control" id="bindeducation" name="city" placeholder="Enter your education" autofocus required>
                                 </div>
                             </div>
-                            <div class="form-group">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <label for="inputState">Course:</label>
-                                    </div>
-                                    <div class="col-md-8">
-                                        <select id="inputState" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label for="inputState">Course:</label>
+                                </div>
+                                <div class="col-md-8">
+                                    <select id="inputState" class="form-control">
                             <option selected>Choose...</option>
                              <option>...</option>
                          </select>
-                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-md-4">
-                                </div>
-                                <div class="col-md-8">
-                                    <button type="submit" class="btn btn-success">Apply Now</button>
-                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
                             </div>
-                        </form>
+                            <div class="col-md-8">
+                                <button type="submit" class="btn btn-success">Apply Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ========================================================================= -->
+    <!-- FOOTER PART 1-->
+    <section class="full-sec">
+        <div class="container ">
+            <div class="row ">
+                <div class="col-md-2 col-xs-12 home-foot1-img ">
+                    <img src="images/bulb.png " alt=" ">
+                </div>
+                <div class="col-md-7 col-xs-12 home-foot1-text ">
+                    <h4>therefore always free from repetition</h4>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
+                </div>
+                <div class="col-md-3 col-xs-12 home-foot1-link ">
+                    <a href="# ">Book This Course</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================================= -->
+    <!-- FOOTER PART 2-->
+    <section class="home-foot2-bg ">
+        <div class="container ">
+            <div class="row home-foot2-link ">
+                <div class="col-md-4 ">
+                    <h4>Top Courses</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="# ">Accounting/Finance</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Civil Engineering</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Art/Design</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Marine Engineering</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Business Management</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Journalism/Management</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Physical Education</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Political Science</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <h4>New Courses</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="# ">Science</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Statistics</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Web Design</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">SEO</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Google Business</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Graphics Design</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Networking Courses</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Information Technology</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <h4>Help & Suppor</h4>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a href="# ">24x7 Live Help</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Contact us</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Feedback</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">FAQs</a>
+                        </div>
+                        <div class="col-md-6">
+                            <a href="# ">Safety Tips</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
-        <!-- ========================================================================= -->
-        <!-- FOOTER PART 1-->
-        <section class="full-sec">
-            <div class="container ">
-                <div class="row ">
-                    <div class="col-md-2 home-foot1-img ">
-                        <img src="images/bulb.png " alt=" ">
-                    </div>
-                    <div class="col-md-7 home-foot1-text ">
-                        <h4>therefore always free from repetition</h4>
-                        <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour</p>
-                    </div>
-                    <div class="col-md-3 home-foot1-link ">
-                        <a href="# ">Book This Course</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ============================================================================= -->
-        <!-- FOOTER PART 2-->
-        <section class="home-foot2-bg ">
-            <div class="container ">
-                <div class="row home-foot2-link ">
-                    <div class="col-md-4 ">
-                        <h4>Top Courses</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <a href="# ">Accounting/Finance</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Civil Engineering</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Art/Design</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Marine Engineering</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Business Management</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Journalism/Management</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Physical Education</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Political Science</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 ">
-                        <h4>New Courses</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <a href="# ">Science</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Statistics</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Web Design</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">SEO</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Google Business</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Graphics Design</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Networking Courses</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Information Technology</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 ">
-                        <h4>Help & Suppor</h4>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <a href="# ">24x7 Live Help</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Contact us</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Feedback</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">FAQs</a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# ">Safety Tips</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end of first row -->
-                <!-- ========================================= -->
-                <div class="row home-foot2-link-1 ">
-                    <div class="col-md-4 ">
-                        <h4>Get In Touch</h4>
-                        <p>Address: 28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A.</p>
-                        <p>Phone: <a href="#! ">+101-1231-4321</p>
+            <!-- end of first row -->
+            <!-- ========================================= -->
+            <div class="row home-foot2-link-1 ">
+                <div class="col-md-4 ">
+                    <h4>Get In Touch</h4>
+                    <p>Address: 28800 Orchard Lake Road, Suite 180 Farmington Hills, U.S.A.</p>
+                    <p>Phone: <a href="#! ">+101-1231-4321</p>
                         <p>Email: <a href="#! ">info@educationmaster.com</a></p>
-                    </div>
-                    <div class="col-md-4 ">
-                        <h4>DOWNLOAD OUR FREE MOBILE APPS</h4>
-                        <div class="row footer-img">
+                </div>
+                <div class="col-md-4 ">
+                    <h4>DOWNLOAD OUR FREE MOBILE APPS</h4>
+                    <div class="row footer-img">
 
-                            <div class="col-md-6">
-                                <a href="# "><img src="images/android.png" alt="android"></a>
-                            </div>
-                            <div class="col-md-6">
-                                <a href="# "><img src="images/apple.png" alt="android"></a>
-                            </div>
+                        <div class="col-md-6">
+                            <a href="# "><img src="images/android.png" alt="android"></a>
                         </div>
-
+                        <div class="col-md-6">
+                            <a href="# "><img src="images/apple.png" alt="android"></a>
+                        </div>
                     </div>
-                    <div class="col-md-4">
-                        <h4>SOCIAL MEDIA</h4>
-                        <div class="row ft-pad">
-                            <a href=" "><i class="fa fa-facebook " aria-hidden="true "></i></a>
-                            <a href=" "><i class="fa fa-twitter " aria-hidden="true "></i></a>
-                            <a href=" "><i class="fa fa-google-plus " aria-hidden="true "></i></a>
-                            <a href=" "><i class="fa fa-youtube " aria-hidden="true "></i></a>
-                        </div>
+
+                </div>
+                <div class="col-md-4">
+                    <h4>SOCIAL MEDIA</h4>
+                    <div class="row ft-pad">
+                        <a href=" "><i class="fa fa-facebook " aria-hidden="true "></i></a>
+                        <a href=" "><i class="fa fa-twitter " aria-hidden="true "></i></a>
+                        <a href=" "><i class="fa fa-google-plus " aria-hidden="true "></i></a>
+                        <a href=" "><i class="fa fa-youtube " aria-hidden="true "></i></a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
     </div>
 </body>
 
